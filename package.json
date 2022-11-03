@@ -1,14 +1,12 @@
 {
   "name": "cvtopdfelectronapp",
   "description": "Electron Forge & Create React App, CV application",
-  "author": {
-    "name": "Adam 'Kim' Tarczewski",
-    "email": "firstshieldy@protonmail.com"
-  },
+  "author": "Adam 'Kim' Tarczewski",
+  "email": "firstshieldy@protonmail.com",
   "license": "MIT",
   "version": "0.1.0",
-  "private": true,
-  "main" : "scr/main.js",
+  "private": false,
+  "main" : "src/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -21,14 +19,15 @@
   },
   "scripts": {
     "start": "electron-forge start",
+    "react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "electron": "WEB_URL=http://localhost:3000 electron .",
+    "electron": "set WEB_URL=http://localhost:3000 && electron .",
     "electron-prd": "electron .",
-    "electron-forge": "WEB_URL=http://localhost:3000 electron-forge start",
+    "electron-forge": "set WEB_URL=http://localhost:3000 && electron-forge start",
     "electron-forge-prd": "electron-forge start"
   },
   "eslintConfig": {
